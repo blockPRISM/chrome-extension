@@ -1,0 +1,73 @@
+html {
+    font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+    font-size: 14px;
+}
+body {
+    margin: 0px;
+}
+#logo {
+    background-image: url('images/icon48.png');
+    background-position: left;
+    background-repeat: no-repeat;
+    width: 166px;
+    height: 32px;
+    padding-top: 16px;
+    padding-left: 54px;
+}
+#content {
+    padding: 8px;
+    width: 220px;
+}
+#info {
+    background-color: #9acefe;
+    color: #ffffff;
+    padding: 4px;
+    border-radius: 4px;
+    display: none;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+#error {
+    background-color: #fe4042;
+    color: #ffffff;
+    padding: 4px;
+    border-radius: 4px;
+    display: none;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+.button {
+    border-radius: 4px;
+    background-color: #6f6f6f;
+    border-color: #a1a1a1;
+    color: #ffffff;
+    font-weight: bold;
+}
+.info_box {
+    margin-top: 8px;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: #f3f3f3;
+}
+.passphrase {
+    font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+    font-size: 12px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: #919191;
+    padding: 4px;
+    width: 210px;
+}
+#public_key_info {
+    display: none;
+}
+#public_key {
+    font-size: 9px;
+    word-wrap: break-word;
+}
+.attention {
+    font-size: 10px;
+}
+#loading {
+    display:none;
+}

@@ -1,0 +1,45 @@
+{
+    "manifest_version": 2,
+    "name": "BlockPRISM.org Encrypted Facebook Messenger",
+    "description": "BlockPRISM BETA enables encryption of Facebook messages on the fly with minimum interaction.",
+    "version": "0.1",
+    "icons": { 
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png" 
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.facebook.com/*"],
+            "js": ["jquery-2.0.3.min.js", "cryptico.min.js", "facebook.js", "insQ.js"],
+            "css": ["blockprism.css"]
+        },
+        {
+            "matches": ["https://www.facebook.com/connect/login_success.html*"],
+            "js": ["oauth2/oauth2_inject.js"],
+            "run_at": "document_start"
+        }
+    ],
+    "background": {
+        "scripts": ["jquery-2.0.3.min.js", "background.js", "cryptico.min.js"]
+    },
+    "permissions": [
+        "http://blockprism.likescale.com/*",
+        "https://graph.facebook.com/oauth/access_token",
+        "storage"
+    ],
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon19.png",
+            "38": "images/icon38.png"
+        },
+        "default_title": "BlockPRISM",
+        "default_popup": "popup.html"
+    },
+    "web_accessible_resources": [
+        "images/lock_open.png",
+        "images/lock_closed.png",
+        "images/lock_na.png",
+        "blockprism.css"
+    ]
+}

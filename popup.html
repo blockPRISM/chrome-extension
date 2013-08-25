@@ -1,0 +1,47 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <script src="/oauth2/oauth2.js"></script>
+        <script src="jquery-2.0.3.min.js"></script>
+        <script src="cryptico.min.js"></script>
+        <script src="popup.js"></script>
+        <link href="popup.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div id="content">
+            <div id="logo">Encryption for Everybody.</div>
+            <div id="info"></div>
+            <div id="error"></div>
+            <div id="logged_out" class="info_box">
+                1. Please login with Facebook:
+                <input type="button" class="button" value="Login with Facebook" id="login" />
+                <div class="attention">
+                    Attention: Open the extension after your Facebook login again and enter your passphrase to finish the setup.
+                </div>
+            </div>
+            <div id="logged_in">
+                <div class="info_box">
+                    Your Facebook-ID:
+                    <div id="facebook_id">
+                        <a href="" target="_blank"></a>
+                    </div>
+                    <input type="button" class="button" value="Logout" id="logout" />
+                </div>
+                <div id="public_key_info" class="info_box">
+                    Your public key:
+                    <div id="public_key"></div>
+                </div>
+                <div id="key_generation_info" class="info_box">
+                    2. Passphrase for key generation:
+                    <input type="password" id="passphrase" class="passphrase" placeholder="Enter your passphrase here..." />
+                    <input type="password" id="passphrase_2" class="passphrase" placeholder="Repeat your passphrase here..." />
+                    <div class="attention">
+                        Attention: The passphrase has to contain at least one upper case and one lower case character and a number. You have to remember this passphrase to login and read encrypted messages on another device!
+                    </div>
+                    <input type="button" class="button" value="Generate key pair" id="generate_key_pair" />
+                    <img src="images/loading.gif" id="loading">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

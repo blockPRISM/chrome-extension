@@ -1,0 +1,12 @@
+.bp-chat-box {
+    padding-right: 4px;
+    padding-top: 4px;
+    cursor: pointer;
+}
+.bp-message-overview {
+    padding-right: 8px;
+    cursor: pointer;
+}
+.fbDockChatTabFlyout textarea {
+    width: 186px;
+}
